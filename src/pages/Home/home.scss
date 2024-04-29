@@ -1,0 +1,32 @@
+.main-header {
+  padding: 10px 20px;
+}
+.home-main-wrapper {
+  display: grid;
+  place-content: center;
+  height: calc(100vh - 90px);
+  h2,h3,h4,h5,h1 {
+    color: $text-color;
+  }
+  form {
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px $shadow;
+    border-radius: 5px;
+    label {
+      color: $text-color;
+    }
+ 
+  }
+}
+.form-grp {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  input,textarea {
+    border-radius: 5px;
+    border: 1px solid $border-color;
+    padding: 5px;
+    outline: none;
+  }
+}
