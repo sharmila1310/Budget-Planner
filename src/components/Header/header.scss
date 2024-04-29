@@ -21,6 +21,9 @@
         width: 300px;
         border-radius: 5px;
         border: 1px solid $border-color;
+        @include for-mobile {
+          width: 230px;
+        }
       }
       img {
         position: absolute;
@@ -35,6 +38,13 @@
       justify-content: space-between;
       align-items: center;
       width: 25%;
+      @include for-pc {
+        width: 40%;
+      }
+      @include for-mobile {
+        width: 44%;
+      }
+   
       img {
         width: 30px;
       }

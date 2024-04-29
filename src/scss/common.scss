@@ -3,7 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+@mixin for-pc {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-mobile {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
 @import "../scss/dark-theme-files.scss";
 @import "../scss/light-theme-files.scss";
 
@@ -23,6 +32,6 @@ h4,
 h5 {
   color: $text-color;
 }
-span{
+span {
   color: $text-color;
 }
