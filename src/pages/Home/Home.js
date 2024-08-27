@@ -1,29 +1,29 @@
 import React, { useState } from "react";
 
 const Home = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    contact: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   contact: "",
+  // });
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  // const handleInputChange = (event) => {
+  //   const { name, value } = event.target;
+  //   setFormData({ ...formData, [name]: value });
+  // };
 
-  // Handle form submission
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(formData);
-    setFormData({ name: "", email: "", contact: "" });
-  };
+  // // Handle form submission
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log(formData);
+  //   setFormData({ name: "", email: "", contact: "" });
+  // };
 
   return (
     <div className="home-main-con">
       <div className="home-main-wrapper">
         <h2>Please fill the forms</h2>
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}>
           <div className="form-grp mb-3">
             <label htmlFor="name">Name</label>
             <input
@@ -54,7 +54,7 @@ const Home = () => {
             />
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
+        </form> */}
       </div>
     </div>
   );
