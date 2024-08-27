@@ -10,18 +10,23 @@ import contact from "../../assets/images/contact-book.png";
 import { NavLink } from "react-router-dom";
 import routePath from "../../routes/routePath";
 const Header = () => {
-  const [isLightTheme, setIsLightTheme] = useState(true);
+  let theme = localStorage.getItem("theme-mode");
+  const [isLightTheme, setIsLightTheme] = useState(
+    theme === "dark-mode" ? false : true
+  );
+
   const handleClickToggle = () => {
+    setIsLightTheme(!isLightTheme);
     const body = document.getElementsByTagName("body")[0];
     if (isLightTheme) {
-      body.classList.remove("dark-theme");
-      body.classList.add("light-theme");
-      localStorage.setItem("theme-mode", "light-theme");
-      setIsLightTheme(false);
-    } else {
       body.classList.add("dark-theme");
       body.classList.remove("light-theme");
-      localStorage.setItem("theme-mode", "dark-theme");
+      localStorage.setItem("theme-mode", "dark-mode");
+      setIsLightTheme(false);
+    } else {
+      body.classList.remove("dark-theme");
+      body.classList.add("light-theme");
+      localStorage.setItem("theme-mode", "light-mode");
       setIsLightTheme(true);
     }
   };
@@ -55,12 +60,12 @@ const Header = () => {
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <a class="dropdown-item" href="#">
-                      Action
+                      MRF Tyres
                     </a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Another action
+                      Goodyear Tyres
                     </a>
                   </li>
                   <li>
@@ -68,7 +73,12 @@ const Header = () => {
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Something else here
+                      CEAT Tyres
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Apollo Tyres
                     </a>
                   </li>
                 </ul>
@@ -88,12 +98,12 @@ const Header = () => {
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <a class="dropdown-item" href="#">
-                      Action
+                      MRF Tyres
                     </a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Another action
+                      Goodyear Tyres
                     </a>
                   </li>
                   <li>
@@ -101,7 +111,12 @@ const Header = () => {
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Something else here
+                      CEAT Tyres
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Apollo Tyres
                     </a>
                   </li>
                 </ul>
@@ -121,20 +136,7 @@ const Header = () => {
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <a class="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Something else here
+                      Tyre Pressure
                     </a>
                   </li>
                 </ul>
@@ -154,20 +156,7 @@ const Header = () => {
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <a class="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Something else here
+                      All Commercial Tyres
                     </a>
                   </li>
                 </ul>
@@ -187,12 +176,12 @@ const Header = () => {
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <a class="dropdown-item" href="#">
-                      Action
+                      Accessories
                     </a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Another action
+                      Batteries
                     </a>
                   </li>
                   <li>
@@ -200,7 +189,7 @@ const Header = () => {
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Something else here
+                      Alloys Wheels
                     </a>
                   </li>
                 </ul>
@@ -220,12 +209,12 @@ const Header = () => {
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <a class="dropdown-item" href="#">
-                      Action
+                      CashBack Offers
                     </a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Another action
+                      Find Tyre Dealers
                     </a>
                   </li>
                   <li>
@@ -233,7 +222,7 @@ const Header = () => {
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Something else here
+                      Compare Tyre
                     </a>
                   </li>
                 </ul>

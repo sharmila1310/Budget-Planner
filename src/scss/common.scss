@@ -35,3 +35,26 @@ h5 {
 span {
   color: $text-color;
 }
+
+//scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #a6d4f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5382da;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2389b7;
+}
