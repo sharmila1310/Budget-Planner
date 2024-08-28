@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import brandlogo from "../../assets/images/tyreplex.png";
 import user from "../../assets/images/user.png";
+import { Link } from "react-router-dom";
 import bell from "../../assets/images/notification.png";
 const Header = () => {
   let theme = localStorage.getItem("theme-mode");
@@ -28,9 +29,9 @@ const Header = () => {
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid custom-header-con">
           <div className="left">
-            <button class="navbar-brand">
+            <Link to="/" class="navbar-brand">
               <img src={brandlogo} alt="logo" />
-            </button>
+            </Link>
           </div>
 
           <div
