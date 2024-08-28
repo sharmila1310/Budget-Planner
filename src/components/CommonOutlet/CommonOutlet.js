@@ -1,9 +1,8 @@
 import React from "react";
-import { Navigate, Outlet } from "react-router-dom";
-import routePath from "../../routes/routePath";
+import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 
-const CommonOutlet = ({ children }) => {
+const CommonOutlet = () => {
   return (
     <div className="main-container">
       <Header />

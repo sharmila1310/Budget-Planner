@@ -1,14 +1,7 @@
 import React, { useState } from "react";
-// import brandlogo from "../../assets/images/tyreplex.webp";
 import brandlogo from "../../assets/images/tyreplex.png";
 import user from "../../assets/images/user.png";
 import bell from "../../assets/images/notification.png";
-import search from "../../assets/images/magnifying-glass.png";
-import home from "../../assets/images/home.png";
-import aboutIcon from "../../assets/images/info.png";
-import contact from "../../assets/images/contact-book.png";
-import { NavLink } from "react-router-dom";
-import routePath from "../../routes/routePath";
 const Header = () => {
   let theme = localStorage.getItem("theme-mode");
   const [isLightTheme, setIsLightTheme] = useState(
@@ -35,9 +28,9 @@ const Header = () => {
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid custom-header-con">
           <div className="left">
-            <a class="navbar-brand" href="#">
+            <button class="navbar-brand">
               <img src={brandlogo} alt="logo" />
-            </a>
+            </button>
           </div>
 
           <div
@@ -47,183 +40,145 @@ const Header = () => {
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               {/* Car Tyres */}
               <li class="nav-item dropdown">
-                <a
+                <button
                   class="nav-link dropdown-toggle"
-                  href="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Car Tyres
-                </a>
+                </button>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">
-                      MRF Tyres
-                    </a>
+                    <button class="dropdown-item">MRF Tyres</button>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Goodyear Tyres
-                    </a>
+                    <button class="dropdown-item">Goodyear Tyres</button>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      CEAT Tyres
-                    </a>
+                    <button class="dropdown-item">CEAT Tyres</button>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Apollo Tyres
-                    </a>
+                    <button class="dropdown-item">Apollo Tyres</button>
                   </li>
                 </ul>
               </li>
               {/* Bike Tyres */}
               <li class="nav-item dropdown">
-                <a
+                <button
                   class="nav-link dropdown-toggle"
-                  href="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Bike Tyres
-                </a>
+                </button>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">
-                      MRF Tyres
-                    </a>
+                    <button class="dropdown-item">MRF Tyres</button>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Goodyear Tyres
-                    </a>
+                    <button class="dropdown-item">Goodyear Tyres</button>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      CEAT Tyres
-                    </a>
+                    <button class="dropdown-item">CEAT Tyres</button>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Apollo Tyres
-                    </a>
+                    <button class="dropdown-item">Apollo Tyres</button>
                   </li>
                 </ul>
               </li>
               {/* Tyre Pressure */}
               <li class="nav-item dropdown">
-                <a
+                <button
                   class="nav-link dropdown-toggle"
-                  href="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Tyre Pressure
-                </a>
+                </button>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Tyre Pressure
-                    </a>
+                    <button class="dropdown-item">Tyre Pressure</button>
                   </li>
                 </ul>
               </li>
               {/* Commercial Tyres */}
               <li class="nav-item dropdown">
-                <a
+                <button
                   class="nav-link dropdown-toggle"
-                  href="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Commercial Tyres
-                </a>
+                </button>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">
-                      All Commercial Tyres
-                    </a>
+                    <button class="dropdown-item">All Commercial Tyres</button>
                   </li>
                 </ul>
               </li>
               {/* Accessories */}
               <li class="nav-item dropdown">
-                <a
+                <button
                   class="nav-link dropdown-toggle"
-                  href="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Accessories
-                </a>
+                </button>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Accessories
-                    </a>
+                    <button class="dropdown-item">Accessories</button>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Batteries
-                    </a>
+                    <button class="dropdown-item">Batteries</button>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Alloys Wheels
-                    </a>
+                    <button class="dropdown-item">Alloys Wheels</button>
                   </li>
                 </ul>
               </li>
               {/* More */}
               <li class="nav-item dropdown">
-                <a
+                <button
                   class="nav-link dropdown-toggle"
-                  href="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   More
-                </a>
+                </button>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">
-                      CashBack Offers
-                    </a>
+                    <button class="dropdown-item">CashBack Offers</button>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Find Tyre Dealers
-                    </a>
+                    <button class="dropdown-item">Find Tyre Dealers</button>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Compare Tyre
-                    </a>
+                    <button class="dropdown-item">Compare Tyre</button>
                   </li>
                 </ul>
               </li>
