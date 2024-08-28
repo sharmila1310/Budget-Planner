@@ -64,7 +64,11 @@ const Home = () => {
                 <p>Open - Monday to Sunday - 10:00AM to 8:00PM</p>
               </div>
 
-              <Link>
+              <Link
+                to="https://www.google.com/maps/place/CEAT%20Shoppe,%20Shree%20Hemkunt%20Tyres%20And%20Services/@28.6426711,77.3789929,15z/data=!4m2!3m1!1s0x0:0xc268cb9ed2106c69?sa=X&ved=2ahUKEwizo8LqydjzAhXRSH0KHQyoDsMQ_BJ6BAhrEAM"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button className="btn border border-danger text-danger w-50 fw-bolder mt-3">
                   Get Directions
                 </button>
