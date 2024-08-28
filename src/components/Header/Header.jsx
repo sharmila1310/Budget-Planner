@@ -44,7 +44,6 @@ const Header = () => {
                 <button
                   class="nav-link dropdown-toggle"
                   id="navbarDropdown"
-                  role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -73,7 +72,6 @@ const Header = () => {
                 <button
                   class="nav-link dropdown-toggle"
                   id="navbarDropdown"
-                  role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -102,7 +100,6 @@ const Header = () => {
                 <button
                   class="nav-link dropdown-toggle"
                   id="navbarDropdown"
-                  role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -119,7 +116,6 @@ const Header = () => {
                 <button
                   class="nav-link dropdown-toggle"
                   id="navbarDropdown"
-                  role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -136,7 +132,6 @@ const Header = () => {
                 <button
                   class="nav-link dropdown-toggle"
                   id="navbarDropdown"
-                  role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -162,7 +157,6 @@ const Header = () => {
                 <button
                   class="nav-link dropdown-toggle"
                   id="navbarDropdown"
-                  role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
