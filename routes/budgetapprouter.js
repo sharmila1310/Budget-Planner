@@ -9,17 +9,38 @@ const auth = require("../middleware/authentication");
 
 budgetAppRouter.get(
   "/department-filter",
+  // auth.verifyToken,
   budgetAppController.getDepartmentName
 );
 
-budgetAppRouter.get("/practice-filter", budgetAppController.getPraticeName);
+budgetAppRouter.get(
+  "/practice-filter",
+  // auth.verifyToken,
+  budgetAppController.getPraticeName
+);
 
-budgetAppRouter.get("/customer-filter", budgetAppController.getCustomerName);
+budgetAppRouter.get(
+  "/customer-filter",
+  // auth.verifyToken,
+  budgetAppController.getCustomerName
+);
 
-budgetAppRouter.post("/add-budgetData", budgetAppController.addBudgetData);
+budgetAppRouter.post(
+  "/add-budgetData",
+  // auth.verifyToken,
+  budgetAppController.addBudgetData
+);
 
-budgetAppRouter.get("/update-budgetData", budgetAppController.updateBudgetData);
+budgetAppRouter.get(
+  "/update-budgetData",
+  // auth.verifyToken,
+  budgetAppController.updateBudgetData
+);
 
-budgetAppRouter.get("/view-budgetData", budgetAppController.viewBudgetData);
+budgetAppRouter.get(
+  "/view-budgetData",
+  // auth.verifyToken,
+  budgetAppController.viewBudgetData
+);
 
 module.exports = budgetAppRouter;
