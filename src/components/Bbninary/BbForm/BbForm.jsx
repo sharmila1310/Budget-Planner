@@ -227,6 +227,7 @@ const BbForm = () => {
     saveBudgetData(postData)
       .then((res) => {
         if (res.status === 200) {
+          console.log("res", res);
           toast.success("Form has been submitted successfully");
           // navigate(routePath.budgetView)
         } else {
