@@ -138,7 +138,7 @@ const BbForm = () => {
 
   // filterPractice api data
   useEffect(() => {
-    let fdata = BusinessFunction.filter(
+    let fdata = BusinessFunction?.filter(
       (item) => item.id === businessName[0]?.id
     );
     getPracticeData(fdata[0]?.id)
@@ -304,8 +304,13 @@ const BbForm = () => {
     setBudgetDataApi(newArray);
   };
 
-  const totals = calculateTotals(budgetDataApi, months, monthMap, "R");
- 
+  const totals = calculateTotals(
+    budgetDataApi,
+    months,
+    monthMap,
+    "R",
+    setBudgetDataApi
+  );
 
   return (
     <div className="bb-main-con">

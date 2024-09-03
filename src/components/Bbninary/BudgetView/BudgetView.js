@@ -4,7 +4,7 @@ import routePath from "../../../routes/routePath";
 
 const BudgetView = () => {
   return (
-    <div>
+    <div className="budget-view">
       <p>Budget has been saved</p>
       <Link to={routePath.root}>Back</Link>
     </div>
