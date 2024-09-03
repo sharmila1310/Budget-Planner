@@ -6,6 +6,10 @@ import routePath from "./routePath";
 import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
+import BudgetView from "../components/Bbninary/BudgetView/BudgetView";
+import Authentication from "../components/Bbninary/Authentication/Authentication";
+import UnAuthroized from "../components/Bbninary/UnAuthorized/UnAuthroized";
+import PageNotFound from "../components/Bbninary/PageNotFound/PageNotFound";
 
 const AppRoutes = () => {
   useEffect(() => {
@@ -26,6 +30,10 @@ const AppRoutes = () => {
   return (
     <Router>
       <Routes>
+        <Route path="*" element={<PageNotFound />}></Route>
+        <Route path={routePath.auth} element={<Authentication />} />
+        <Route path={routePath.unAuthorized} element={<UnAuthroized />} />
+
         <Route
           element={
             <PrivateRoutes>
@@ -34,6 +42,8 @@ const AppRoutes = () => {
           }
         >
           <Route path={routePath.root} element={<Home />} />
+          <Route path={routePath.home} element={<Home />} />
+          <Route path={routePath.budgetView} element={<BudgetView />} />
           <Route path={routePath.about} element={<About />} />
           <Route path={routePath.contact} element={<Contact />} />
         </Route>

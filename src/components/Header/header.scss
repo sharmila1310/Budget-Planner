@@ -15,7 +15,8 @@
       align-items: center;
       width: 25%;
       img {
-        width: 100px;
+        width: 150px;
+        filter: brightness(0) invert(1);
       }
     }
     .search-con {
@@ -46,7 +47,7 @@
     }
     .right {
       display: flex;
-      justify-content: space-between;
+      justify-content: end;
       align-items: center;
       width: 35%;
       @include for-pc {
@@ -58,6 +59,7 @@
 
       img {
         width: 30px;
+        margin: 0px 10px;
       }
       .user-details {
         span {
@@ -65,21 +67,28 @@
           font-size: 14px;
         }
       }
-      .toggle-con {
-        cursor: pointer;
-        width: 100px;
-        height: 35px;
-        box-shadow: 0px 0px 5px $toggle;
-        border-radius: 25px;
-        .toggle-ball {
-          width: 30px;
-          height: 30px;
-          background-image: linear-gradient(45deg, #5866ad, transparent);
-          border-radius: 50%;
-          margin-top: 2px;
-          transition: all 0.3s;
+      .project-container {
+        span {
+          color: $main-white;
+          font-weight: bold;
+          font-size: 20px;
         }
       }
+      // .toggle-con {
+      //   cursor: pointer;
+      //   width: 100px;
+      //   height: 35px;
+      //   box-shadow: 0px 0px 5px $toggle;
+      //   border-radius: 25px;
+      //   .toggle-ball {
+      //     width: 30px;
+      //     height: 30px;
+      //     background-image: linear-gradient(45deg, #5866ad, transparent);
+      //     border-radius: 50%;
+      //     margin-top: 2px;
+      //     transition: all 0.3s;
+      //   }
+      // }
     }
   }
   // .header-bottom {

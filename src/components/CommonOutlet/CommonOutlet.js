@@ -1,13 +1,18 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
+import Sidebar from "../Sidebar/Sidebar";
 
 const CommonOutlet = () => {
   return (
-    <div className="main-container">
+    <div className="app-container">
       <Header />
-      <div>
-        <Outlet />
+
+      <div className="main-body">
+        <Sidebar />
+        <div className="body-wrapper">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
